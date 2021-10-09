@@ -1,0 +1,21 @@
+<h1>Current Market</h1>
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Coin</th>
+            <th>Last Price</th>
+            <th>24 hour change</th>
+            <th>7 days change</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let coinData of coinDataArray">
+            <td>{{coinData.id}}</td>
+            <td>{{coinData.name}}</td>
+            <td>$ {{coinData.quote.USD.price | number : '1.2-2'}}</td>
+            <td [ngClass]="{'text-warning' : coinData.quote.USD.percent_change_24h < 0, 'text-success' :coinData.quote.USD.percent_change_24h>0}">{{coinData.quote.USD.percent_change_24h | number : '1.3-3' | minus}} %</td>
+            <td [ngClass]="{'text-warning' : coinData.quote.USD.percent_change_7d < 0, 'text-success' :coinData.quote.USD.percent_change_7d>0}">{{coinData.quote.USD.percent_change_7d | number : '1.3-3' | minus}} %</td>
+        </tr>
+    </tbody>
+</table>

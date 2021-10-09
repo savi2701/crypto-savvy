@@ -4,7 +4,7 @@
     margin: 4rem 8rem;
 }
 .banner{
-    margin-top: 10rem;
+    margin: 10rem 0;
     @include flex-align-justify-between();
     &__content{
         h1{
