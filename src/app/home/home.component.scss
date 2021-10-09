@@ -1,0 +1,31 @@
+@import "../../assets/mixins.scss";
+
+.container{
+    margin: 4rem 8rem;
+}
+.banner{
+    margin-top: 10rem;
+    @include flex-align-justify-between();
+    &__content{
+        h1{
+            font-size: 5rem;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-size: 1.15rem;
+            color: #9e9fa4;
+            margin-bottom: 3rem;
+        }
+        .btn{
+            padding: 1.5rem 2.5rem;
+            outline: none;
+            border: 1px solid #9e9fa4;
+            border-radius: 0.25rem;
+            font-size: 1.25rem;
+            cursor: pointer;
+        }
+    }
+    img{
+       width: 600px;
+    }
+}

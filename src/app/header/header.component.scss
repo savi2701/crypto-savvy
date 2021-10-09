@@ -1,0 +1,35 @@
+@import "../../assets/mixins.scss";
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+.header{
+    @include flex-align-justify-between();
+    &__logo{
+        margin-right: 6rem;
+        font-size: 1.25rem;
+        font-family: 'Abril Fatface', cursive;
+        img{
+            vertical-align: middle;
+            height: 40px;
+            width: 40px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+    }
+    &__links{
+        display: flex;
+        align-items: center;
+        a{
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+            border-radius: 0.25rem;
+            font-size: 1.25rem;
+            &.active{
+                background: #6C63FF;
+            }
+        }
+        li{
+            &:nth-child(2){
+                margin-right: 4rem;
+            }
+        }
+    }
+}
