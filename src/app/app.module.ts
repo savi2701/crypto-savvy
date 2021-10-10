@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { MinusPipe } from './minus.pipe';
+import { CryptoConvertorComponent } from './crypto-convertor/crypto-convertor.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MinusPipe } from './minus.pipe';
     DashboardComponent,
     HeaderComponent,
     HomeComponent,
-    MinusPipe
+    MinusPipe,
+    CryptoConvertorComponent
   ],
   imports: [
     BrowserModule,
