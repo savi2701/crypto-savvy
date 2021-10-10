@@ -12,6 +12,14 @@
             width: 40px;
             margin-right: 10px;
             margin-bottom: 10px;
+            @media screen and (max-width: 475px){
+                height: 30px;
+                width: 30px;
+            }
+        }
+        @media screen and (max-width: 475px){
+            margin-right: 2rem;
+            font-size: 1rem;
         }
     }
     &__links{
@@ -25,11 +33,11 @@
             &.active{
                 background: #6C63FF;
             }
-        }
-        li{
-            &:nth-child(2){
-                margin-right: 4rem;
+            @media screen and (max-width: 475px){
+                font-size: 0.75rem;
+                padding: 0.75rem;
             }
         }
+        
     }
 }

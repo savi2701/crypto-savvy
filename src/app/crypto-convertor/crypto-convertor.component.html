@@ -1,1 +1,34 @@
-<p>crypto-convertor works!</p>
+<div class="banner">
+    <div class="banner__content">
+        <h1>
+            Lightning cryptocurrency exchange <img src="../../assets/images/arrow.svg" alt="arrow">
+        </h1>
+        <p>We handle everything complicated so that you can spend your time on what matters.</p>
+    </div>
+    <div class="banner__calculator">
+        <form (ngSubmit)="exchangeCrypto(f)" #f="ngForm">
+            <div class="form-control">
+                <div class="convert-from">
+                    <select name="inputCurrency" required [(ngModel)]="inputCurrency">
+                        <option *ngFor="let coinData of coinDataArray" [value]="coinData.quote.USD.price">{{coinData.name}}</option>
+                    </select>
+                    <hr>
+                    <p>You Send</p>
+                    <input type="text" placeholder="Enter amount" name="amount" [(ngModel)]="inputAmount">
+                </div>
+                <div class="convert-to">
+                    <select  name="outputCurrency" required [(ngModel)]="outputCurrency">
+                        <option *ngFor="let coinData of coinDataArray" [value]="coinData.quote.USD.price">{{coinData.name}}</option>
+                    </select>
+                    <hr>
+                    <p>You Get</p>
+                    <div class="output">{{finalOutputAmount}}</div>
+                </div>
+                <div class="arrow"></div>
+            </div>
+            <button type="submit">Exchange</button>
+        </form>
+        
+    </div>
+    
+</div>

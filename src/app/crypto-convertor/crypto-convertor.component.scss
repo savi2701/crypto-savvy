@@ -1,0 +1,155 @@
+@import "../../assets/mixins.scss";
+
+.banner{
+    @include flex-align-justify-between();
+    margin: 10rem 0;
+    @media screen and (max-width: 475px){
+        flex-direction: column;
+        margin: 2rem 0;
+    }
+    &__content{
+        max-width: 50%;
+        h1{
+            font-size: 5rem;
+            margin-bottom: 1rem;
+            img{
+                height: 3rem;
+                width: 3rem;
+                vertical-align: middle;
+                @media screen and (max-width: 475px){
+                    height: 30px;
+                    width: 30px;
+                }
+            }
+            @media screen and (max-width: 475px){
+                font-size: 2rem;
+            }
+        }
+        p{
+            font-size: 1.15rem;
+            color: #9e9fa4;
+            margin-bottom: 3rem;
+            @media screen and (max-width: 475px){
+                font-size: 1rem;
+            }
+        }
+        @media screen and (max-width: 475px){
+            max-width: 100%;
+        }
+    }
+    &__calculator{
+        .form-control{
+            @include flex-align-justify-between();
+            gap: 0.5rem;
+            position: relative;
+        }
+        
+        .arrow{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: white;
+            border-radius: 50%;
+            background-size: contain;
+            height: 40px;
+            width: 40px;
+            @media screen and (max-width: 475px){
+                height: 30px;
+                width: 30px;
+            }
+            &::after{
+                position: absolute;
+                content: "";
+                background: url("../../assets/images/arrow-black.svg") no-repeat;
+                background-size: cover;
+                height: 30px;
+                width: 30px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                @media screen and (max-width: 475px){
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+        .convert-from,.convert-to{
+            padding: 2rem;
+            border-radius: 0.5rem;
+            background: #1b1b1b;
+            width:310px;
+            @media screen and (max-width: 475px){
+                width: 150px;
+                padding: 0.5rem;
+            }
+            select{
+                outline: none;
+                border: none;
+                background: #1b1b1b;
+                font-size: 1.5rem;
+                @media screen and (max-width: 475px){
+                    font-size: 0.75rem;
+                    width: 130px;
+                }
+            }
+            hr{
+                margin: 1rem 0;
+                border-color: #242424;
+                
+            }
+            p{
+                background: #1b1b1b;
+                font-size: 0.85rem;
+                margin-bottom: 1rem;
+                @media screen and (max-width: 475px){
+                    font-size: 0.75rem;
+                }
+            }
+            input{
+                border: none;
+                background: #1b1b1b;
+                height: 2rem;
+                font-size: 1.5rem;
+                color: #fff;
+                @media screen and (max-width: 475px){
+                    font-size: 0.75rem;
+                }
+                &::placeholder{
+                    font-size: 1.5rem;
+                    color: #fff;
+                    @media screen and (max-width: 475px){
+                        font-size: 0.75rem;
+                    }
+                }
+            }
+        }
+        .convert-from p{
+            color: #6C63FF;
+        }
+        .convert-to p{
+            color: #6aa84f;
+        }
+        button{
+            width: 100%;
+            margin-top: 1rem;
+            font-size: 1.5rem;
+            padding: 0.75rem 1rem;
+            outline: none;
+            border: 1px solid white;
+            cursor: pointer;
+            @media screen and (max-width: 475px){
+                font-size: 1rem;
+            }
+        }
+        .output{
+            height: 32px;
+            background: #1b1b1b;
+            font-size: 1.5rem;
+            color: white;
+            @media screen and (max-width: 475px){
+                font-size: 0.75rem;
+            }
+        }
+    }
+}
