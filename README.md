@@ -32,4 +32,4 @@ The app is divided into 4 components - crypto-convertor, dashboard, header, home
 
 ## production ready deployment
 
-https://wizardly-wing-f4a229.netlify.app/home
+https://wizardly-wing-f4a229.netlify.app
