@@ -29,3 +29,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Architecture information
 
 The app is divided into 4 components - crypto-convertor, dashboard, header, home. The components are made in order to keep logic of a component in place, also for the ease in routing.
+
+## production ready deployment
+
+https://wizardly-wing-f4a229.netlify.app/home
